@@ -20,7 +20,11 @@
     #endif // !defined(NOMINMAX)
     #include <windows.h>
     #include <io.h>
+#if defined(__MINGW32__)
+    #include <versionhelpers.h>
+#else
     #include <VersionHelpers.h>
+#endif
 #endif
 
 #include <algorithm>
